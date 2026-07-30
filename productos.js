@@ -42,7 +42,7 @@ const PRODUCTS = [
     name: "Vestido Rojo",
     price: 175000,
     category: "ceremonia",
-    images: ["images/rojo1.png", "images/rojo2.png", "images/rojo3.png", "images/rojo4.png"],
+    images: ["images/rojo1.png", "images/rojo2.png", "images/rojo3.png"],
     description: "Vestido de tul bordado con piedras."
   },
   {
@@ -68,7 +68,55 @@ const PRODUCTS = [
     category: "novia",
     images: ["images/negro1.png", "images/negro2.png"],
     description: "Vestido negro de lurex con brillos."
-  }
+  },
+  {
+    id: "vestido-bordo",
+    name: "Vestido Bordó",
+    price: 205000,
+    category: "novia",
+    images: ["images/bordo1.png", "images/bordo2.png"],
+    description: "Vestido tul bordado con transparencias."
+  },
+  {
+    id: "vestido-bicolor",
+    name: "Vestido Bicolor",
+    price: 205000,
+    category: "novia",
+    images: ["images/bicolor1.png", "images/bicolor2.png", "images/bicolor3.png"],
+    description: "Corset tul bordado y pollera en capas de organza."
+  },
+  {
+    id: "vestido-dorado",
+    name: "Vestido de 15",
+    price: 205000,
+    category: "novia",
+    images: ["images/dorado1.png", "images/dorado2.png"],
+    description: "Vestido de 15."
+  },
+  {
+    id: "vestido-naranja",
+    name: "Vestido Naranja de Fiesta",
+    price: 205000,
+    category: "novia",
+    images: ["images/naranja1.png"],
+    description: "Vestido de fiesta."
+  },
+  {
+    id: "vestido-rosa",
+    name: "Vestido Rosa",
+    price: 205000,
+    category: "novia",
+    images: ["images/rosa1.png"],
+    description: "Vestido de fiesta."
+  },
+  {
+    id: "vestido-blanco2",
+    name: "Vestido de Egreso",
+    price: 205000,
+    category: "novia",
+    images: ["images/randomblanco1.png", "images/randomblanco2.png"],
+    description: "Vestido de egreso."
+  },
 ];
 
 function formatPrice(value) {
