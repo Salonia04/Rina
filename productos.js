@@ -117,6 +117,94 @@ const PRODUCTS = [
     images: ["images/randomblanco1.png", "images/randomblanco2.png"],
     description: "Vestido de egreso."
   },
+  {
+    id: "vestido-multiuso",
+    name: "Vestido Multiuso",
+    price: 205000,
+    category: "novia",
+    images: ["images/celes1.png", "images/celes2.png", "images/celes3.png", "images/celes4.png", "images/celes5.png", "images/celes6.png", "images/celes7.png"],
+    description: "Vestido en yersey de seda elastizada."
+  },
+  {
+    id: "vestido-lunares",
+    name: "Vestido a Lunares",
+    price: 205000,
+    category: "novia",
+    images: ["images/circulos1.png", "images/circulos2.png"],
+    description: "Vestido a lunares en gasa y crep satén."
+  },
+  {
+    id: "vestido-azulOscuro",
+    name: "Vestido Azul Oscuro",
+    price: 205000,
+    category: "novia",
+    images: ["images/ne1.png", "images/ne2.png"],
+    description: "Vestido azul con detalle de cinto brillante en crep elastizado."
+  },
+  {
+    id: "vestido-verde",
+    name: "Vestido Verde",
+    price: 205000,
+    category: "novia",
+    images: ["images/verde1.png", "images/verde2.png"],
+    description: "Mono de Yersey con espandex."
+  },
+  {
+    id: "vestido-hilos",
+    name: "Vestido de Tul",
+    price: 205000,
+    category: "novia",
+    images: ["images/hilos1.png", "images/hilos2.png", "images/hilos3.png" ],
+    description: "Vestido en tul bordado."
+  },
+  {
+    id: "vestido-flores",
+    name: "Vestido de Tul",
+    price: 205000,
+    category: "novia",
+    images: ["images/flores1.png", "images/flores2.png"],
+    description: "Vestido de novia o egreso en tul bordado 3 D."
+  },
+  {
+    id: "vestido-xxxxxx",
+    name: "xxxxxx",
+    price: 205000,
+    category: "novia",
+    images: ["images/verdeplata1.jpeg", "images/verdeplata2.jpeg", "images/verdeplata3.jpeg"],
+    description: "xxxxxxxxxx."
+  },
+  {
+    id: "vestido-xxxxxx",
+    name: "xxxxxx",
+    price: 205000,
+    category: "novia",
+    images: ["images/verdenegro1.png", "images/verdenegro2.png"],
+    description: "xxxxxxxxxx."
+  },
+  {
+    id: "vestido-xxxxxx",
+    name: "xxxxxx",
+    price: 205000,
+    category: "novia",
+    images: ["images/negroblanco1.png", "images/negroblanco2.png"],
+    description: "xxxxxxxxxx."
+  },
+  {
+    id: "vestido-xxxxxx",
+    name: "xxxxxx",
+    price: 205000,
+    category: "novia",
+    images: ["images/grisbrillos1.jpeg", "images/grisbrillos2.jpeg", "images/grisbrillos3.jpeg"],
+    description: "xxxxxxxxxx."
+  },
+  {
+    id: "vestido-xxxxxx",
+    name: "xxxxxx",
+    price: 205000,
+    category: "novia",
+    images: ["images/otrogrisbrillos1.jpeg", "images/otrogrisbrillos2.jpeg", "images/otrogrisbrillos3.jpeg"],
+    description: "xxxxxxxxxx."
+  },
 ];
 
 function formatPrice(value) {
