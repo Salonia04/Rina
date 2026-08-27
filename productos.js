@@ -10,7 +10,7 @@ const PRODUCTS = [
     name: "Vestido Azul",
     price: 185000,
     category: "noche",
-    images: ["images/azul1.png", "images/azul2.png", "images/azul3.png"],
+    images: ["images/azul1.webp", "images/azul2.webp", "images/azul3.webp"],
     description: "Vestido azul de lycra de seda con una caída increíble."
   },
   {
@@ -18,7 +18,7 @@ const PRODUCTS = [
     name: "Vestido Blanco",
     price: 210000,
     category: "noche",
-    images: ["images/blanco1.png", "images/blanco2.png", "images/blanco3.png"],
+    images: ["images/blanco1.webp", "images/blanco2.webp", "images/blanco3.webp"],
     description: "Vestido blanco brillante con glitter."
   },
   {
@@ -26,7 +26,7 @@ const PRODUCTS = [
     name: "Vestido Negro",
     price: 195000,
     category: "dia",
-    images: ["images/n1.png", "images/n2.png"],
+    images: ["images/n1.webp", "images/n2.webp"],
     description: "Vestido de lurex negro con brillos (el detalle del cinto bordado es opcional."
   },
   {
@@ -34,7 +34,7 @@ const PRODUCTS = [
     name: "Vestido Celeste",
     price: 160000,
     category: "dia",
-    images: ["images/celeste1.png", "images/celeste2.png"],
+    images: ["images/celeste1.webp", "images/celeste2.webp"],
     description: "Vestido de satén con aplicaciones de tul bordado."
   },
   {
@@ -42,7 +42,7 @@ const PRODUCTS = [
     name: "Vestido Rojo",
     price: 175000,
     category: "ceremonia",
-    images: ["images/rojo1.png", "images/rojo2.png", "images/rojo3.png"],
+    images: ["images/rojo1.webp", "images/rojo2.webp", "images/rojo3.webp"],
     description: "Vestido de tul bordado con piedras."
   },
   {
@@ -50,7 +50,7 @@ const PRODUCTS = [
     name: "Vestido Negro 2",
     price: 225000,
     category: "ceremonia",
-    images: ["images/neg1.png", "images/neg2.png", "images/neg3.png", "images/neg4.png"],
+    images: ["images/neg1.webp", "images/neg2.webp", "images/neg3.webp", "images/neg4.webp"],
     description: "Vestido de tul bordado con lentejuelas, diseño moderno con tajos y cortes."
   },
   {
@@ -58,7 +58,7 @@ const PRODUCTS = [
     name: "Vestido Plateado",
     price: 198000,
     category: "novia",
-    images: ["images/plateado1.png", "images/plateado2.png", "images/plateado3.png"],
+    images: ["images/plateado1.webp", "images/plateado2.webp", "images/plateado3.webp"],
     description: "Vestido de Satén con diseño estampado."
   },
   {
@@ -66,7 +66,7 @@ const PRODUCTS = [
     name: "Vestido Negro 3",
     price: 205000,
     category: "novia",
-    images: ["images/negro1.png", "images/negro2.png"],
+    images: ["images/negro1.webp", "images/negro2.webp"],
     description: "Vestido negro de lurex con brillos."
   },
   {
@@ -74,7 +74,7 @@ const PRODUCTS = [
     name: "Vestido Bordó",
     price: 205000,
     category: "novia",
-    images: ["images/bordo1.png", "images/bordo2.png"],
+    images: ["images/bordo1.webp", "images/bordo2.webp"],
     description: "Vestido tul bordado con transparencias."
   },
   {
@@ -82,47 +82,15 @@ const PRODUCTS = [
     name: "Vestido Bicolor",
     price: 205000,
     category: "novia",
-    images: ["images/bicolor1.png", "images/bicolor2.png", "images/bicolor3.png"],
+    images: ["images/bicolor1.webp", "images/bicolor2.webp", "images/bicolor3.webp"],
     description: "Corset tul bordado y pollera en capas de organza."
-  },
-  {
-    id: "vestido-dorado",
-    name: "Vestido de 15",
-    price: 205000,
-    category: "novia",
-    images: ["images/dorado1.png", "images/dorado2.png"],
-    description: "Vestido de 15."
-  },
-  {
-    id: "vestido-naranja",
-    name: "Vestido Naranja de Fiesta",
-    price: 205000,
-    category: "novia",
-    images: ["images/naranja1.png"],
-    description: "Vestido de fiesta."
-  },
-  {
-    id: "vestido-rosa",
-    name: "Vestido Rosa",
-    price: 205000,
-    category: "novia",
-    images: ["images/rosa1.png"],
-    description: "Vestido de fiesta."
-  },
-  {
-    id: "vestido-blanco2",
-    name: "Vestido de Egreso",
-    price: 205000,
-    category: "novia",
-    images: ["images/randomblanco1.png", "images/randomblanco2.png"],
-    description: "Vestido de egreso."
   },
   {
     id: "vestido-multiuso",
     name: "Vestido Multiuso",
     price: 205000,
     category: "novia",
-    images: ["images/celes1.png", "images/celes2.png", "images/celes3.png", "images/celes4.png", "images/celes5.png", "images/celes6.png", "images/celes7.png"],
+    images: ["images/celes1.webp", "images/celes2.webp", "images/celes3.webp", "images/celes4.webp", "images/celes5.webp", "images/celes6.webp", "images/celes7.webp"],
     description: "Vestido en yersey de seda elastizada."
   },
   {
@@ -130,7 +98,7 @@ const PRODUCTS = [
     name: "Vestido a Lunares",
     price: 205000,
     category: "novia",
-    images: ["images/circulos1.png", "images/circulos2.png"],
+    images: ["images/circulos1.webp", "images/circulos2.webp"],
     description: "Vestido a lunares en gasa y crep satén."
   },
   {
@@ -138,7 +106,7 @@ const PRODUCTS = [
     name: "Vestido Azul Oscuro",
     price: 205000,
     category: "novia",
-    images: ["images/ne1.png", "images/ne2.png"],
+    images: ["images/ne1.webp", "images/ne2.webp"],
     description: "Vestido azul con detalle de cinto brillante en crep elastizado."
   },
   {
@@ -146,7 +114,7 @@ const PRODUCTS = [
     name: "Vestido Verde",
     price: 205000,
     category: "novia",
-    images: ["images/verde1.png", "images/verde2.png"],
+    images: ["images/verde1.webp", "images/verde2.webp"],
     description: "Mono de Yersey con espandex."
   },
   {
@@ -154,7 +122,7 @@ const PRODUCTS = [
     name: "Vestido de Tul",
     price: 205000,
     category: "novia",
-    images: ["images/hilos1.png", "images/hilos2.png", "images/hilos3.png" ],
+    images: ["images/hilos1.webp", "images/hilos2.webp", "images/hilos3.webp" ],
     description: "Vestido en tul bordado."
   },
   {
@@ -162,7 +130,7 @@ const PRODUCTS = [
     name: "Vestido de Tul",
     price: 205000,
     category: "novia",
-    images: ["images/flores1.png", "images/flores2.png"],
+    images: ["images/flores1.webp", "images/flores2.webp"],
     description: "Vestido de novia o egreso en tul bordado 3 D."
   },
   {
@@ -170,7 +138,7 @@ const PRODUCTS = [
     name: "xxxxxx",
     price: 205000,
     category: "novia",
-    images: ["images/verdeplata1.jpeg", "images/verdeplata2.jpeg", "images/verdeplata3.jpeg"],
+    images: ["images/verdeplata1.webp", "images/verdeplata2.webp", "images/verdeplata3.webp"],
     description: "xxxxxxxxxx."
   },
   {
@@ -178,7 +146,7 @@ const PRODUCTS = [
     name: "xxxxxx",
     price: 205000,
     category: "novia",
-    images: ["images/verdenegro1.png", "images/verdenegro2.png"],
+    images: ["images/verdenegro1.webp", "images/verdenegro2.webp"],
     description: "xxxxxxxxxx."
   },
   {
@@ -186,7 +154,7 @@ const PRODUCTS = [
     name: "xxxxxx",
     price: 205000,
     category: "novia",
-    images: ["images/negroblanco1.png", "images/negroblanco2.png"],
+    images: ["images/negroblanco1.webp", "images/negroblanco2.webp"],
     description: "xxxxxxxxxx."
   },
   {
@@ -194,7 +162,7 @@ const PRODUCTS = [
     name: "xxxxxx",
     price: 205000,
     category: "novia",
-    images: ["images/grisbrillos1.jpeg", "images/grisbrillos2.jpeg", "images/grisbrillos3.jpeg"],
+    images: ["images/grisbrillos1.webp", "images/grisbrillos2.webp", "images/grisbrillos3.webp"],
     description: "xxxxxxxxxx."
   },
   {
@@ -202,7 +170,7 @@ const PRODUCTS = [
     name: "xxxxxx",
     price: 205000,
     category: "novia",
-    images: ["images/otrogrisbrillos1.jpeg", "images/otrogrisbrillos2.jpeg", "images/otrogrisbrillos3.jpeg"],
+    images: ["images/otrogrisbrillos1.webp", "images/otrogrisbrillos2.webp", "images/otrogrisbrillos3.webp"],
     description: "xxxxxxxxxx."
   },
 ];
