@@ -522,20 +522,16 @@ a {
 
 .clients-carousel {
   --visible: 3;
-  --gap: 1.5rem;
+  --gap: 1.1rem;
   position: relative;
   max-width: 1100px;
   margin: 2.5rem auto 0;
   display: flex;
   align-items: center;
   gap: 1.25rem;
+  overflow: visible;
 }
 
-.clients-viewport {
-  overflow: hidden;
-  flex: 1;
-  min-width: 0; /* evita que el flex item se desborde */
-}
 
 .clients-track {
   display: flex;
@@ -548,6 +544,27 @@ a {
   margin: 0;
   cursor: default;
   user-select: none;
+  position: relative;
+  z-index: 1;
+  transform-origin: center;
+  transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), z-index 0s;
+}
+
+.client-card:hover {
+  transform: scale(1.05);
+  z-index: 5;
+}
+
+.client-card.is-first { transform-origin: left center; }
+.client-card.is-last  { transform-origin: right center; }
+
+/* Las vecinas se corren para darle espacio a la que crece */
+.client-card.push-left {
+  transform: translateX(-10px);
+}
+
+.client-card.push-right {
+  transform: translateX(10px);
 }
 
 /* Marco lujurioso */
@@ -557,9 +574,7 @@ a {
   border-radius: 6px;
   overflow: hidden;
   border: 1px solid #c9a86a;
-  box-shadow:
-    0 0 0 4px rgba(201, 168, 106, 0.12),
-    0 14px 34px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.45); /* solo la sombra, sin glow dorado */
 }
 
 .client-photo img {
@@ -567,7 +582,16 @@ a {
   height: 100%;
   object-fit: cover;
   display: block;
-  pointer-events: none; /* la foto no reacciona a clicks/toques */
+  pointer-events: none;
+}
+
+.clients-viewport {
+  overflow-x: hidden;  
+  overflow-y: visible; 
+  flex: 1;
+  min-width: 0;
+  padding: 24px 12px;
+  overflow: hidden;
 }
 
 /* Difuminado negro de abajo hacia arriba + nombre/edad */

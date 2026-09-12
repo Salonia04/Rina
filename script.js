@@ -59,6 +59,22 @@ document.addEventListener('DOMContentLoaded', () => {
     `).join('');
 
     const cards = clientsGrid.querySelectorAll('.client-card');
+        cards.forEach((card, index) => {
+          card.addEventListener('mouseenter', () => {
+            cards.forEach((otherCard, otherIndex) => {
+              if (otherIndex < index) {
+                otherCard.classList.add('push-left');
+              } else if (otherIndex > index) {
+                otherCard.classList.add('push-right');
+              }
+            });
+          });
+          card.addEventListener('mouseleave', () => {
+            cards.forEach(otherCard => {
+              otherCard.classList.remove('push-left', 'push-right');
+            });
+          });
+        });
     const prevBtn = document.querySelector('.clients-arrow-prev');
     const nextBtn = document.querySelector('.clients-arrow-next');
     let currentIndex = 0;
