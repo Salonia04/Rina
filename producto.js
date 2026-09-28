@@ -1,46 +1,51 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const container = document.getElementById('productDetail');
-  const params = new URLSearchParams(window.location.search);
-  const id = params.get('id');
-  const product = PRODUCTS.find(p => p.id === id);
+/* Datos -------------------------------------------------------------------------------------- */
 
-  if (!product) {
-    container.innerHTML = `
-      <div class="not-found">
-        <p class="eyebrow">Vestido no encontrado</p>
-        <h1>No pudimos encontrar esta prenda</h1>
-        <a class="whatsapp-btn" href="main.html">Volver al catálogo</a>
-      </div>
-    `;
-    return;
-  }
+function getProductFromUrl() {
+  const id = new URLSearchParams(window.location.search).get('id');
+  return PRODUCTS.find(p => p.id === id);
+}
 
-  document.title = `${product.name} — Rina Alta Costura`;
 
-  const images = product.images && product.images.length ? product.images : ['img/placeholder.jpg'];
+/* Renders -------------------------------------------------------------------------------------- */
+
+function renderNotFound(container) {
+  container.innerHTML = `
+    <div class="not-found">
+      <p class="eyebrow">Vestido no encontrado</p>
+      <h1>No pudimos encontrar esta prenda</h1>
+      <a class="whatsapp-btn" href="main.html">Volver al catálogo</a>
+    </div>
+  `;
+}
+
+function renderProduct(container, product, images) {
   const hasMultiple = images.length > 1;
+
+  const arrows = hasMultiple ? `
+    <button class="carousel-arrow prev" aria-label="Foto anterior">‹</button>
+    <button class="carousel-arrow next" aria-label="Foto siguiente">›</button>
+  ` : '';
+
+  const slides = images.map(src => `
+    <div class="carousel-slide">
+      <img src="${src}" alt="${product.name}">
+    </div>
+  `).join('');
+
+  const dots = hasMultiple ? `
+    <div class="carousel-dots" id="carouselDots">
+      ${images.map((_, i) => `<button class="carousel-dot${i === 0 ? ' active' : ''}" data-index="${i}" aria-label="Ver foto ${i + 1}"></button>`).join('')}
+    </div>
+  ` : '';
 
   container.innerHTML = `
     <div class="product-detail-grid">
       <div class="carousel" id="carousel">
         <div class="carousel-main">
-          ${hasMultiple ? `
-            <button class="carousel-arrow prev" aria-label="Foto anterior">‹</button>
-            <button class="carousel-arrow next" aria-label="Foto siguiente">›</button>
-          ` : ''}
-          <div class="carousel-track" id="carouselTrack">
-            ${images.map(src => `
-              <div class="carousel-slide">
-                <img src="${src}" alt="${product.name}">
-              </div>
-            `).join('')}
-          </div>
+          ${arrows}
+          <div class="carousel-track" id="carouselTrack">${slides}</div>
         </div>
-        ${hasMultiple ? `
-          <div class="carousel-dots" id="carouselDots">
-            ${images.map((_, i) => `<button class="carousel-dot${i === 0 ? ' active' : ''}" data-index="${i}" aria-label="Ver foto ${i + 1}"></button>`).join('')}
-          </div>
-        ` : ''}
+        ${dots}
       </div>
       <div class="product-detail-info">
         <p class="eyebrow">${product.category}</p>
@@ -54,11 +59,10 @@ document.addEventListener('DOMContentLoaded', () => {
       </div>
     </div>
   `;
+}
 
-  if (hasMultiple) {
-    initCarousel(images.length);
-  }
-});
+
+/* Carrusel de fotos -------------------------------------------------------------------------------------- */
 
 function initCarousel(count) {
   const track = document.getElementById('carouselTrack');
@@ -79,7 +83,7 @@ function initCarousel(count) {
     dot.addEventListener('click', () => goTo(Number(dot.dataset.index)));
   });
 
-  // Swipe support for mobile
+  // Swipe en mobile
   let startX = 0;
   track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; });
   track.addEventListener('touchend', e => {
@@ -88,3 +92,28 @@ function initCarousel(count) {
     if (diff < -50) goTo(current + 1);
   });
 }
+
+
+/* Print -------------------------------------------------------------------------------------- */
+
+document.addEventListener('DOMContentLoaded', () => {
+  const container = document.getElementById('productDetail');
+  const product = getProductFromUrl();
+
+  if (!product) {
+    renderNotFound(container);
+    return;
+  }
+
+  document.title = `${product.name} — Rina Alta Costura`;
+
+  const images = product.images && product.images.length
+    ? product.images
+    : ['img/placeholder.jpg'];
+
+  renderProduct(container, product, images);
+
+  if (images.length > 1) {
+    initCarousel(images.length);
+  }
+});
